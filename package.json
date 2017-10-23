@@ -26,7 +26,7 @@
         "slug", "slugify", "blog"
     ],
     "activationEvents": [
-        "onCommand:extension.slugify"
+        "onCommand:extension.slugifySelection"
     ],
     "main": "./extension",
     "contributes": {
