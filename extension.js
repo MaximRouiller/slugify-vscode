@@ -18,12 +18,14 @@ function slugifySelection() {
         console.error('wrong kind of window I guess?')
     }
 
-    var selectedText = vscode.window.activeTextEditor.document.getText(vscode.window.activeTextEditor.selection);
     vscode.window.activeTextEditor.edit(function (eb) {
-        eb.replace(vscode.window.activeTextEditor.selection, slugit(selectedText, {
-            remove: /[$*_+~.()'"!\-:@]/g,
-            lower: true
-        }));
+        for (let selection of vscode.window.activeTextEditor.selections) {
+            console.log(selection);
+            eb.replace(selection, slugit(vscode.window.activeTextEditor.document.getText(selection), {
+                remove: /[$*+~.()'"!\-:@]/g,
+                lower: true
+            }));
+        }
     });
 }
 
