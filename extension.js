@@ -20,7 +20,6 @@ function slugifySelection() {
 
     vscode.window.activeTextEditor.edit(function (eb) {
         for (let selection of vscode.window.activeTextEditor.selections) {
-            console.log(selection);
             eb.replace(selection, slugit(vscode.window.activeTextEditor.document.getText(selection), {
                 remove: /[$*+~.()'"!\-:@]/g,
                 lower: true
