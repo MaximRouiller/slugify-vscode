@@ -2,7 +2,7 @@
     "name": "slugify-vscode",
     "displayName": "slugify",
     "description": "This is a wrapper around the npm slugify package to have it work on the active selection in Code.",
-    "version": "1.0.2",
+    "version": "1.1.0",
     "publisher": "maximerouiller",
     "homepage": "https://github.com/MaximRouiller/slugify-vscode/blob/master/README.md",
     "author": {
@@ -20,17 +20,21 @@
         "vscode": "^1.17.0"
     },
     "categories": [
-        "Formatters", "Other"
+        "Formatters",
+        "Other"
     ],
     "keywords": [
-        "slug", "slugify", "blog"
+        "slug",
+        "slugify",
+        "blog"
     ],
     "activationEvents": [
         "onCommand:extension.slugifySelection"
     ],
     "main": "./extension",
     "contributes": {
-        "commands": [{
+        "commands": [
+            {
                 "command": "extension.slugifySelection",
                 "title": "Slugify selection"
             }
@@ -45,10 +49,10 @@
         "mocha": "^3.5.0",
         "eslint": "^4.6.1",
         "@types/node": "^7.0.0",
-        "@types/mocha": "^2.2.42"
+        "@types/mocha": "^2.2.42",
+        "vscode": "^1.1.5"
     },
     "dependencies": {
-        "slugify": "^1.2.1",
-        "vscode": "^1.1.5"
+        "slugify": "^1.2.1"
     }
 }
